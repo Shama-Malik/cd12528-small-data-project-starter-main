@@ -1,0 +1,19 @@
+# Workflow to ensure whenever a Github PR is submitted, 
+# a JIRA ticket gets created automatically. 
+name: Manual Workflow
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on pull request events but only for the master branch
+  pull_request_target:
+    branches: [main]
+    types: [opened, reopened]
+  workflow_dispatch:
+
+jobs:
+  test-transition-issue:
+    name: Convert Github Issue to Jira Issue
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
