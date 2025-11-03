@@ -1,0 +1,1 @@
+Final Validation Loss: 1009.9471

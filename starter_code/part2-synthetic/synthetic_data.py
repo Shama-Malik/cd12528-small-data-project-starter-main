@@ -152,6 +152,8 @@ def main():
 
     # Step 4: Train and validate VAE
     # -----------------------------
+    training_log = []
+
     for epoch in range(num_epochs):
         model.train()
         train_loss = 0
@@ -173,8 +175,20 @@ def main():
                 loss = criterion(x_recon, x, mu, logvar)
                 val_loss += loss.item()
 
+        avg_train_loss = train_loss / len(train_loader)
+        avg_val_loss = val_loss / len(val_loader)
+        training_log.append((epoch + 1, avg_train_loss, avg_val_loss))
+
         if (epoch + 1) % 100 == 0:
-            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {train_loss/len(train_loader):.4f}, Val Loss: {val_loss/len(val_loader):.4f}")
+            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.4f}, Val Loss: {avg_val_loss:.4f}")
+
+# ----- Save performance log after training -----
+    log_df = pd.DataFrame(training_log, columns=["Epoch", "Train_Loss", "Val_Loss"])
+    log_df.to_csv("vae_training_log.csv", index=False)
+
+    print(f"\n✅ Final Validation Loss: {avg_val_loss:.4f}")
+    with open("vae_final_performance.txt", "w") as f:
+        f.write(f"Final Validation Loss: {avg_val_loss:.4f}\n")
 
     # Step 5: Generate synthetic denied loans
     # -----------------------------
