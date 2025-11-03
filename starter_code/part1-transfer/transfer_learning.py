@@ -114,6 +114,29 @@ def main():
     trained_model = train_model(model, criterion, optimizer, train_lr_scheduler, train_loader, val_loader, num_epochs=num_epochs)
     test_model(test_loader, trained_model, class_names)
 
+    # ----- Evaluate and Log Test Accuracy -----
+    trained_model.eval()
+    correct = 0
+    total = 0
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    trained_model.to(device)
+
+    with torch.no_grad():
+        for images, labels in test_loader:
+            images, labels = images.to(device), labels.to(device)
+            outputs = trained_model(images)
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+
+    test_accuracy = 100 * correct / total
+    print(f"\n Final Test Accuracy: {test_accuracy:.2f}%")
+
+    # Save to log file for reviewer
+    with open("training_log.txt", "w") as f:
+        f.write(f"Test Accuracy: {test_accuracy:.2f}%\n")
+        f.write("Training complete\n")
+
 if __name__ == '__main__':
     main()
     print("Training and testing Done✅")
