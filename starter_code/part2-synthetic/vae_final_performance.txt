@@ -1,1 +1,23 @@
-Final Validation Loss: 1009.9471
+Epoch 100/1000, Train Loss: 1217.1919, Val Loss: 1040.5573
+Epoch 200/1000, Train Loss: 1165.7494, Val Loss: 1020.4907
+Epoch 300/1000, Train Loss: 1166.2348, Val Loss: 1012.3962
+Epoch 400/1000, Train Loss: 1157.7113, Val Loss: 992.1365
+Epoch 500/1000, Train Loss: 1136.7745, Val Loss: 967.0140
+Epoch 600/1000, Train Loss: 1124.7816, Val Loss: 961.6198
+Epoch 700/1000, Train Loss: 1137.1575, Val Loss: 955.1983
+Epoch 800/1000, Train Loss: 1119.7624, Val Loss: 949.2476
+Epoch 900/1000, Train Loss: 1110.0677, Val Loss: 944.8967
+Epoch 1000/1000, Train Loss: 1120.0376, Val Loss: 975.5976
+
+✅ Final Validation Loss: 975.5976
+ 
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95     61222
+           1       0.00      0.00      0.00      6241
+
+    accuracy                           0.91     67463
+   macro avg       0.45      0.50      0.48     67463
+weighted avg       0.82      0.91      0.86     67463
+
+done

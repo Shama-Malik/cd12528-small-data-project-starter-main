@@ -1,2 +1,69 @@
-Test Accuracy: 100.00%
-Training complete
+Classes: ['beach', 'desert', 'forest']
+Epoch: 1
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Train  Loss: 7.3863406380017596 Accuracy: 0.7
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Validation  Loss: 4.627146745721499 Accuracy: 0.7833333333333333
+Epoch: 2
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Train  Loss: 5.874707328776519 Accuracy: 0.7466666666666667
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Validation  Loss: 1.7722529421250026 Accuracy: 0.9333333333333333
+Epoch: 3
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Train  Loss: 3.9318314346795282 Accuracy: 0.8333333333333334
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Validation  Loss: 4.041631345947583 Accuracy: 0.85
+Epoch: 4
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Train  Loss: 7.15922524780035 Accuracy: 0.8066666666666666
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Validation  Loss: 3.4626309239926436 Accuracy: 0.8833333333333333
+Epoch: 5
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Train  Loss: 3.2363582311663777 Accuracy: 0.8733333333333333
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Phase: Validation  Loss: 2.2428552546383194 Accuracy: 0.9333333333333333
+Training finished. Highest accuracy: 0.9333333333333333
+showing test results
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+Classes: ['beach', 'desert', 'forest']
+
+ Final Test Accuracy: 93.75%
+Training and testing Done✅
