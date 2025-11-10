@@ -201,10 +201,17 @@ def main():
 
     # Combine the new data with original dataset
     augmented_df = pd.concat([df, fake_df], ignore_index=True)
-    augmented_df.to_csv("C:/Users/DELL/Downloads/cd12528-small-data-project-starter-main/cd12528-small-data-project-starter-main/starter_code/part2-synthetic/data/loan_continuous_expanded.csv", index=False)
-    
+    augmented_data_path = "C:/Users/DELL/Downloads/cd12528-small-data-project-starter-main/cd12528-small-data-project-starter-main/starter_code/part2-synthetic/data/loan_continuous_augmented.csv"
+    augmented_df.to_csv(augmented_data_path, index=False)
+    print("\n--- VAE Augmentation Summary ---")
+    print(f"Synthetic data generated: {len(fake_df)} samples.")
+    print(f"Total augmented dataset size: {len(augmented_df)} samples.")
+    print(f"Augmented Class Balance (0/1): {augmented_df['Loan Status'].value_counts()}")
+    print("----------------------------------\n")
 
-    DATA_PATH = r'C:\Users\DELL\Downloads\cd12528-small-data-project-starter-main\cd12528-small-data-project-starter-main\starter_code\part2-synthetic\data\loan_continuous.csv'
+    # Step 6: Test the augmented dataset
+    # -----------------------------
+    DATA_PATH = augmented_data_path
     test_model(DATA_PATH)
 
 if __name__ == '__main__':
